@@ -1,7 +1,7 @@
 # Build Tool Showcase
 ## Project Description
-### Build Tool Showcase is a simple web application that demonstrates the use of various build tools and package managers. The application includes a counter feature and displays a list of popular build tools using data fetched from a JSON file. It serves as an example of how to set up a project using modern web development tools and best practices, including Webpack, Babel, Sass, and others.
-## Setup Instructions
+#### Build Tool Showcase is a simple web application that demonstrates the use of various build tools and package managers. The application includes a counter feature and displays a list of popular build tools using data fetched from a JSON file. It serves as an example of how to set up a project using modern web development tools and best practices, including Webpack, Babel, Sass, and others.
+#### Setup Instructions
 Follow these steps to set up and run the project locally:
 
 1. **Clone the Repository:**
@@ -99,7 +99,11 @@ Follow these steps to set up and run the project locally:
 
 #### Brief Explanation of the Build Process
 
-
+#### 1. Bundling with Webpack: Webpack bundles JavaScript, SCSS, and other files, optimizing them for development and production.
+#### 2. Transpiling with Babel: Babel converts ES6+ JavaScript into backward-compatible versions for wider browser support.
+#### 3. Styling with Sass: Sass compiles SCSS into CSS, allowing the use of advanced CSS features.
+#### 4. Linting with ESLint: ESLint checks code for errors and enforces coding standards.
+#### 5. Testing with Jest: Jest runs tests to validate the application's functionality.
 
 
 
