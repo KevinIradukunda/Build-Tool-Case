@@ -1,0 +1,132 @@
+$primary-color: #282c34;
+$primary-hover-color: #282c34;
+$background-color: #f0f2f5;
+$border-color: #ddd;
+$button-padding: 15px 25px;
+$box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+$hover-box-shadow: 0 4px 10px rgba(55, 0, 179, 0.4);
+$disabled-color: #bdbdbd;
+$font-family: 'Arial', sans-serif;
+$transition-duration: 0.3s;
+
+
+@mixin button-style($bg-color, $hover-color, $padding: $button-padding) {
+  background-color: $bg-color;
+  color: white;
+  border: none;
+  padding: $padding;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  transition: background-color $transition-duration, box-shadow $transition-duration;
+
+  &:hover:not(:disabled) {
+    background-color: $hover-color;
+    box-shadow: $hover-box-shadow;
+  }
+
+  &:disabled {
+    background-color: $disabled-color;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+}
+
+body {
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  background-color: $background-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+header {
+  background-color: $primary-color;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 90px;
+}
+
+#counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: 2px solid $border-color;
+  border-radius: 10px;
+  box-shadow: $box-shadow;
+  padding: 50px;
+  margin-bottom: 0px;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.02); 
+  }
+
+  #count {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0 20px;
+    color: #333;
+  }
+
+  
+  button {
+    margin: 0 15px; 
+
+    @include button-style($primary-color, $primary-hover-color);
+  }
+}
+
+footer {
+  background-color: $primary-color;
+  color: white;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+ 
+  #counter {
+    flex-direction: column; 
+    padding: 20px;
+
+    #count {
+      font-size: 36px; 
+      margin: 10px 0; 
+    }
+
+    button {
+      width: 100%; 
+      margin: 10px 0; 
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  
+  #counter {
+    padding: 15px; 
+  }
+
+  header {
+    font-size: 20px; 
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}

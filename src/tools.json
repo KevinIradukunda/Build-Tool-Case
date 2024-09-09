@@ -1,0 +1,8 @@
+[
+  { "name": "Webpack", "description": "A module bundler for JavaScript applications." },
+  { "name": "Babel", "description": "A JavaScript compiler for writing next-generation JavaScript." },
+  { "name": "ESLint", "description": "A tool for identifying and fixing problems in JavaScript code." },
+  { "name": "Jest", "description": "A testing framework for JavaScript with a focus on simplicity." },
+  { "name": "Sass", "description": "A preprocessor scripting language that is interpreted or compiled into CSS." },
+  { "name": "Lodash", "description": "A modern JavaScript utility library delivering modularity, performance, & extras." }
+]
